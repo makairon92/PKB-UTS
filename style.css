@@ -1,0 +1,153 @@
+/* Pengaturan Dasar */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #004a99;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.instructions {
+    font-size: 1.1em;
+    color: #444;
+    background-color: #e6f7ff;
+    border-left: 5px solid #007bff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+/* Pengaturan Form */
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    padding: 20px;
+}
+
+legend {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #004a99;
+    padding: 0 10px;
+}
+
+#expert-form div {
+    margin-bottom: 12px;
+}
+
+#expert-form label {
+    font-size: 1em;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#expert-form input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Pengaturan Hasil (UPDATED) */
+.hidden {
+    display: none;
+}
+
+#result-container {
+    margin-top: 30px;
+    border-top: 2px dashed #007bff;
+    padding-top: 20px;
+}
+
+/* Container untuk rekomendasi utama kini transparan */
+#primary-recommendation {
+    margin-bottom: 20px;
+}
+
+/* Setiap item rekomendasi akan memiliki box-nya sendiri */
+.recommendation-item {
+    background-color: #f0fff4;
+    border: 1px solid #28a745;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px; /* Jarak antar box jika ada > 1 */
+}
+
+.recommendation-item h3 {
+    margin: 0 0 10px 0;
+    color: #155724;
+}
+
+.recommendation-item p {
+    margin: 5px 0 0 0;
+    font-size: 1.1em;
+}
+
+/* Styling untuk pesan "Tidak Ada Rekomendasi" */
+.recommendation-item.no-dominant {
+    background-color: #fffaf0;
+    border-color: #ffc107;
+}
+
+.recommendation-item.no-dominant h3 {
+    color: #856404;
+}
+
+#score-details {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#score-details li {
+    font-size: 1.1em;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+#score-details li:last-child {
+    border-bottom: none;
+}

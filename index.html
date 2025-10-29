@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Pakar - Rekomendasi Jurusan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Sistem Pakar Rekomendasi Jurusan</h1>
+        <p>Berdasarkan Teori Multiple Intelligences & Metode Forward Chaining</p>
+    </header>
+
+    <main>
+        <form id="expert-form">
+            <p class="instructions">Silakan centang pernyataan yang paling sesuai dengan diri Anda. Anda boleh memilih sebanyak mungkin.</p>
+
+            <fieldset>
+                <legend>Kecerdasan Verbal (Linguistik)</legend>
+                <div><input type="checkbox" id="F1" value="F1"><label for="F1">Menyukai baca buku [F1]</label></div>
+                <div><input type="checkbox" id="F2" value="F2"><label for="F2">Senang berkomunikasi baik secara lisan atau tulisan [F2]</label></div>
+                <div><input type="checkbox" id="F3" value="F3"><label for="F3">Senang mengarang cerita dengan baik [F3]</label></div>
+                <div><input type="checkbox" id="F4" value="F4"><label for="F4">Senang berdiskusi juga mengikuti pembicaraan suatu masalah [F4]</label></div>
+                <div><input type="checkbox" id="F5" value="F5"><label for="F5">Senang belajar bahasa asing [F5]</label></div>
+                <div><input type="checkbox" id="F6" value="F6"><label for="F6">Senang bermain game cerita [F6]</label></div>
+                <div><input type="checkbox" id="F7" value="F7"><label for="F7">Senang membaca dan mampu mengerti pemahaman yang tinggi [F7]</label></div>
+                <div><input type="checkbox" id="F8" value="F8"><label for="F8">Memiliki kosakata yang lumayan banyak [F8]</label></div>
+                <div><input type="checkbox" id="F9" value="F9"><label for="F9">Senang menulis karangan, puisi dan tulisan lainnya [F9]</label></div>
+                <div><input type="checkbox" id="F10" value="F10"><label for="F10">Unggul dalam mata pelajaran bahasa [F10]</label></div>
+                <div><input type="checkbox" id="F11" value="F11"><label for="F11">Gampang menghafal kutipan, ucapan ahli, dll. [F11]</label></div>
+                <div><input type="checkbox" id="F12" value="F12"><label for="F12">Tidak gampang melakukan kesalahan dalam menulis [F12]</label></div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Kecerdasan Logis (Matematika)</legend>
+                <div><input type="checkbox" id="F13" value="F13"><label for="F13">Senang bekerja dan bermain dengan angka-angka [F13]</label></div>
+                <div><input type="checkbox" id="F14" value="F14"><label for="F14">Menyukai mata pelajaran (logika, hitungan, mtk, fisika) [F14]</label></div>
+                <div><input type="checkbox" id="F15" value="F15"><label for="F15">Dapat menghitung angka dengan mudah (tambah, kurang, kali, bagi) [F15]</label></div>
+                <div><input type="checkbox" id="F16" value="F16"><label for="F16">Mengimplementasikan matematika pada kehidupan sehari-hari (jual beli, dll) [F16]</label></div>
+                <div><input type="checkbox" id="F17" value="F17"><label for="F17">Saya dapat membaca informasi berupa grafik dan tabel dengan baik [F17]</label></div>
+                <div><input type="checkbox" id="F18" value="F18"><label for="F18">Menyukai komputer dan berbagai game angka [F18]</label></div>
+                <div><input type="checkbox" id="F19" value="F19"><label for="F19">Menggemari permainan puzzle (TTS, Sudoku, Rubik) [F19]</label></div>
+                <div><input type="checkbox" id="F20" value="F20"><label for="F20">Menghitung angka adalah hal gampang [F20]</label></div>
+                <div><input type="checkbox" id="F21" value="F21"><label for="F21">Jika menemukan barang rusak, akan mencari tahu bagian yang menyebabkannya [F21]</label></div>
+                <div><input type="checkbox" id="F22" value="F22"><label for="F22">Dapat menjelaskan sesuatu secara logis dan terperinci [F22]</label></div>
+                <div><input type="checkbox" id="F23" value="F23"><label for="F23">Menganggap matematika dapat mempermudah memahami pelajaran lain [F23]</label></div>
+                <div><input type="checkbox" id="F24" value="F24"><label for="F24">Senang membuat eksperimen sederhana [F24]</label></div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Kecerdasan Visual (Spasial)</legend>
+                <div><input type="checkbox" id="F25" value="F25"><label for="F25">Tertarik pada buku atau gambar dengan banyak warna [F25]</label></div>
+                <div><input type="checkbox" id="F26" value="F26"><label for="F26">Cepat dalam menyelesaikan puzzle, serta permainan visual lainnya [F26]</label></div>
+                <div><input type="checkbox" id="F27" value="F27"><label for="F27">Mahir dalam menyelesaikan puzzle [F27]</label></div>
+                <div><input type="checkbox" id="F28" value="F28"><label for="F28">Mudah untuk melihat dan memahami soal lewat gambar [F28]</label></div>
+                <div><input type="checkbox" id="F29" value="F29"><label for="F29">Mudah mengingat jalan yang pernah dilewati [F29]</label></div>
+                <div><input type="checkbox" id="F30" value="F30"><label for="F30">Memiliki ketertarikan pada prakarya tiga dimensi [F30]</label></div>
+                <div><input type="checkbox" id="F31" value="F31"><label for="F31">Suka membayangkan tentang impian dan imajinasi [F31]</label></div>
+                <div><input type="checkbox" id="F32" value="F32"><label for="F32">Mahir membangun kontruksi tiga dimensi seperti lego [F32]</label></div>
+                <div><input type="checkbox" id="F33" value="F33"><label for="F33">Mampu menentukan warna yang sesuai untuk gambar [F33]</label></div>
+                <div><input type="checkbox" id="F34" value="F34"><label for="F34">Menonjol dalam pelajaran seni rupa [F34]</label></div>
+                <div><input type="checkbox" id="F35" value="F35"><label for="F35">Menyukai dalam hal menata ruangan [F35]</label></div>
+                <div><input type="checkbox" id="F36" value="F36"><label for="F36">Punya rasa ingin tahu tentang detail kecil (gradasi, tebal tipis) [F36]</label></div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Kecerdasan Musikal</legend>
+                <div><input type="checkbox" id="F37" value="F37"><label for="F37">Senang mendengarkan musik [F37]</label></div>
+                <div><input type="checkbox" id="F38" value="F38"><label for="F38">Mudah mengikuti irama musik [F38]</label></div>
+                <div><input type="checkbox" id="F39" value="F39"><label for="F39">Memiliki suara yang merdu [F39]</label></div>
+                <div><input type="checkbox" id="F40" value="F40"><label for="F40">Suka memainkan alat musik [F40]</label></div>
+                <div><input type="checkbox" id="F41" value="F41"><label for="F41">Kegiatan sambil mendengar musik [F41]</label></div>
+                <div><input type="checkbox" id="F42" value="F42"><label for="F42">Kalau melupakan sesuatu akan mencoba bersenandung [F42]</label></div>
+                <div><input type="checkbox" id="F43" value="F43"><label for="F43">Mendengarkan musik dari semua genre [F43]</label></div>
+                <div><input type="checkbox" id="F44" value="F44"><label for="F44">Dapat dengan mudah menghafal musik [F44]</label></div>
+                <div><input type="checkbox" id="F45" value="F45"><label for="F45">Jika barang rusak, akan mengetuk jari membentuk irama [F45]</label></div>
+                <div><input type="checkbox" id="F46" value="F46"><label for="F46">Lebih mudah belajar dengan iringan musik [F46]</label></div>
+                <div><input type="checkbox" id="F47" value="F47"><label for="F47">Dapat dengan mudah mengetahui nada yang tidak sesuai [F47]</label></div>
+                <div><input type="checkbox" id="F48" value="F48"><label for="F48">Sering mendengarkan lagu sambil jalan kaki serta menyanyikannya [F48]</label></div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Kecerdasan Kinestetik</legend>
+                <div><input type="checkbox" id="F49" value="F49"><label for="F49">Menyukai mata pelajaran olahraga di sekolah [F49]</label></div>
+                <div><input type="checkbox" id="F50" value="F50"><label for="F50">Selalu beraktivitas yang melibatkan gerakan fisik [F50]</label></div>
+                <div><input type="checkbox" id="F51" value="F51"><label for="F51">Dapat mengatur tubuh dengan baik [F51]</label></div>
+                <div><input type="checkbox" id="F52" value="F52"><label for="F52">Tidak bisa jika duduk diam terlalu lama [F52]</label></div>
+                <div><input type="checkbox" id="F53" value="F53"><label for="F53">Ketika berbicara, memiliki kebiasaan menggerak-gerakkan tangan [F53]</label></div>
+                <div><input type="checkbox" id="F54" value="F54"><label for="F54">Akan bereaksi dengan tubuh kepada jawaban masalah [F54]</label></div>
+                <div><input type="checkbox" id="F55" value="F55"><label for="F55">Menyukai aktivitas menerjang bahaya [F55]</label></div>
+                <div><input type="checkbox" id="F56" value="F56"><label for="F56">Menonjolkan gerak motorik tubuh dalam ketepatan atau kecepatan [F56]</label></div>
+                <div><input type="checkbox" id="F57" value="F57"><label for="F57">Jika barang rusak, akan memisahkan semua bagian dan menyatukannya lagi [F57]</label></div>
+                <div><input type="checkbox" id="F58" value="F58"><label for="F58">Jika menemukan keterampilan baru akan langsung mencobanya [F58]</label></div>
+                <div><input type="checkbox" id="F59" value="F59"><label for="F59">Ide cemerlang terlintas saat joging atau aktivitas fisik [F59]</label></div>
+                <div><input type="checkbox" id="F60" value="F60"><label for="F60">Menyukai kegiatan gerak fisik dominan (berlari, memanjat) [F60]</label></div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Kecerdasan Interpersonal</legend>
+                <div><input type="checkbox" id="F61" value="F61"><label for="F61">Mampu bergaul dengan orang lain [F61]</label></div>
+                <div><input type="checkbox" id="F62" value="F62"><label for="F62">Menyukai kegiatan berkelompok dan organisasi [F62]</label></div>
+                <div><input type="checkbox" id="F63" value="F63"><label for="F63">Menyukai saat berinteraksi dengan orang lain [F63]</label></div>
+                <div><input type="checkbox" id="F64" value="F64"><label for="F64">Mampu menciptakan suatu hubungan sosial [F64]</label></div>
+                <div><input type="checkbox" id="F65" value="F65"><label for="F65">Sering memperhatikan perilaku dan cara hidup orang lain [F65]</label></div>
+                <div><input type="checkbox" id="F66" value="F66"><label for="F66">Kadangkala dimintai bantuan terkait nasehat dan saran [F66]</label></div>
+                <div><input type="checkbox" id="F67" value="F67"><label for="F67">Suka bersosialisasi di lingkungan sekolah maupun tempat tinggal [F67]</label></div>
+                <div><input type="checkbox" id="F68" value="F68"><label for="F68">Menyukai saat menjadi penengah saat ada suatu masalah [F68]</label></div>
+                <div><input type="checkbox" id="F69" value="F69"><label for="F69">Selalu menghadiri kegiatan bersama (anggota/pemimpin) [F69]</label></div>
+                <div><input type="checkbox" id="F70" value="F70"><label for="F70">Gemar sekali dalam mengajari orang lain [F70]</label></div>
+                <div><input type="checkbox" id="F71" value="F71"><label for="F71">Mudah dalam berkomunikasi (verbal/non verbal) [F71]</label></div>
+                <div><input type="checkbox" id="F72" value="F72"><label for="F72">Merasa bisa menjadi pemimpin dan hebat dalam ilmu sosial [F72]</label></div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Kecerdasan Intrapersonal</legend>
+                <div><input type="checkbox" id="F73" value="F73"><label for="F73">Lebih menyukai bekerja dan belajar dengan baik seorang diri [F73]</label></div>
+                <div><input type="checkbox" id="F74" value="F74"><label for="F74">Terbiasa dalam memahami dan mengatur kondisi emosi diri [F74]</label></div>
+                <div><input type="checkbox" id="F75" value="F75"><label for="F75">Dapat mengungkapkan pikiran dan perasaanya sendiri [F75]</label></div>
+                <div><input type="checkbox" id="F76" value="F76"><label for="F76">Dapat meningkatkan prinsip diri dengan nilai yang dipercayai [F76]</label></div>
+                <div><input type="checkbox" id="F77" value="F77"><label for="F77">Mengetahui keunggulan dan kelemahan diri sendiri [F77]</label></div>
+                <div><input type="checkbox" id="F78" value="F78"><label for="F78">Lebih banyak kegiatan dengan diri sendiri daripada orang lain [F78]</label></div>
+                <div><input type="checkbox" id="F79" value="F79"><label for="F79">Mengingat suatu hal dengan memejamkan mata & merasakan [F79]</label></div>
+                <div><input type="checkbox" id="F80" value="F80"><label for="F80">Tidak menyukai berkumpul bersama orang lain saat akhir pekan [F80]</label></div>
+                <div><input type="checkbox" id="F81" value="F81"><label for="F81">Mempunyai kemampuan memahami hubungan pribadi [F81]</label></div>
+                <div><input type="checkbox" id="F82" value="F82"><label for="F82">Mempunyai kemampuan regulasi emosi yang baik [F82]</label></div>
+                <div><input type="checkbox" id="F83" value="F83"><label for="F83">Mempunyai tujuan hidup yang telah tersusun rapi [F83]</label></div>
+                <div><input type="checkbox" id="F84" value="F84"><label for="F84">Banyak belajar dari kesalahan masa lalu [F84]</label></div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Kecerdasan Naturalis</legend>
+                <div><input type="checkbox" id="F85" value="F85"><label for="F85">Menyukai alam dan peka terhadap lingkungan [F85]</label></div>
+                <div><input type="checkbox" id="F86" value="F86"><label for="F86">Menggolongkan suatu hal di alam harus selaras cirinya [F86]</label></div>
+                <div><input type="checkbox" id="F87" value="F87"><label for="F87">Senang berkebun juga menyukai tanaman [F87]</label></div>
+                <div><input type="checkbox" id="F88" value="F88"><label for="F88">Dapat dengan mudah melihat perubahan cuaca dan lingkungan [F88]</label></div>
+                <div><input type="checkbox" id="F89" value="F89"><label for="F89">Menyukai interaksi dengan alam (tanaman dan hewan) [F89]</label></div>
+                <div><input type="checkbox" id="F90" value="F90"><label for="F90">Menyukai kegiatan di alam (naik gunung, dll) [F90]</label></div>
+                <div><input type="checkbox" id="F91" value="F91"><label for="F91">Sangat antusias saat berada atau jalan-jalan di alam [F91]</label></div>
+                <div><input type="checkbox" id="F92" value="F92"><label for="F92">Mengetahui hal sederhana di alam (siklus kehidupan) [F92]</label></div>
+                <div><input type="checkbox" id="F93" value="F93"><label for="F93">Suka memegang hewan dan melihat perkembangannya [F93]</label></div>
+                <div><input type="checkbox" id="F94" value="F94"><label for="F94">Berprestasi dalam mata pelajaran (biologi, IPA, lingkungan) [F94]</label></div>
+                <div><input type="checkbox" id="F95" value="F95"><label for="F95">Berpetualang di alam terbuka [F95]</label></div>
+                <div><input type="checkbox" id="F96" value="F96"><label for="F96">Suka memelihara beberapa hewan dan sayang terhadapnya [F96]</label></div>
+            </fieldset>
+
+            
+            <button type="submit">Lihat Hasil Rekomendasi</button>
+        </form>
+
+        <div id="result-container" class="hidden">
+            <h2>Hasil Analisis Sistem Pakar</h2>
+            <div id="primary-recommendation">
+                </div>
+            <h3>Rincian Skor Kecerdasan Anda:</h3>
+            <ul id="score-details">
+                </ul>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
