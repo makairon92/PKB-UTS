@@ -132,7 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 2. Menampilkan rekomendasi dengan skor > 70%
         if (highScoreResults.length > 0) {
-            
             highScoreResults.forEach((result, index) => {
                 const recommendationBlock = document.createElement('div');
                 recommendationBlock.className = 'recommendation-item';
