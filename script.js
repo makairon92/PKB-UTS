@@ -1,11 +1,5 @@
-// Menunggu sampai seluruh halaman HTML dimuat
 document.addEventListener('DOMContentLoaded', () => {
-
-    // =================================================================
-    // KNOWLEDGE BASE (Basis Pengetahuan)
-    // =================================================================
-    // Didasarkan pada Jurnal 2 (Nurul Husna, dkk.)
-    
+    // Knowledge Base (Basis Pengetahuan)
     const knowledgeBase = {
         'K1': {
             name: 'Kecerdasan Verbal (Linguistik)',
@@ -49,12 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // =================================================================
-    // RULE BASE (Basis Aturan) - LENGKAP 96 FAKTA
-    // =================================================================
-    // Memetakan setiap Indikator (Fakta) ke Jenis Kecerdasan (Kesimpulan)
-    // [cite: 255-269]
-    
+    // Rule Base (Basis Aturan) - LENGKAP 96 FAKTA
     const indicatorMap = {
         'F1': 'K1', 'F2': 'K1', 'F3': 'K1', 'F4': 'K1', 'F5': 'K1', 'F6': 'K1',
         'F7': 'K1', 'F8': 'K1', 'F9': 'K1', 'F10': 'K1', 'F11': 'K1', 'F12': 'K1',
@@ -86,9 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         runForwardChaining();
     });
 
-    // =================================================================
     // INFERENCE ENGINE (Mesin Inferensi)
-    // =================================================================
     function runForwardChaining() {
         
         // 1. Inisialisasi Working Memory (untuk menyimpan skor)
@@ -111,12 +98,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // 4. Menghitung Hasil Akhir (Kesimpulan)
-        // Menerapkan rumus Kc = (n(It) / n(Ik)) * 100% [cite: 206]
         let results = [];
         for (const code in scores) {
             const intelligence = knowledgeBase[code];
-            const score = scores[code]; // n(It) - jumlah indikator terpilih [cite: 209]
-            const total = intelligence.totalIndicators; // n(Ik) - jumlah indikator yg dimiliki [cite: 210]
+            const score = scores[code]; // n(It) - jumlah indikator terpilih
+            const total = intelligence.totalIndicators; // n(Ik) - jumlah indikator yg dimiliki
             
             const percentage = (total === 0) ? 0 : (score / total) * 100;
 
@@ -135,9 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
         displayResults(results);
     }
 
-    // =================================================================
-    // FUNGSI TAMPILKAN HASIL (UPDATED)
-    // =================================================================
+    // Display Hasil
     function displayResults(results) {
         // Membersihkan hasil sebelumnya
         primaryRecommendation.innerHTML = '';
